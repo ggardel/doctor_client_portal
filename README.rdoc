@@ -1,5 +1,25 @@
 == README
 
+This is a Rails application of a Doctor/Client Portal where the user (client)
+would have access to (read) his own information (only) and the Administrator (Doctor or Nurse)
+would have access to all clients information (C.R.U.D.).
+
+For this application were generated five Models:
+ User
+ PatientInfo
+ MedicalHist
+ PhysicalExam
+ Notes.
+
+
+The ERD is composed of:
+
+User_to_many PatientInfo
+User_to_many MedicalHist
+User_to_many PhysicalExam
+User_to_many Notes
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 

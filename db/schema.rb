@@ -11,10 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722000858) do
+ActiveRecord::Schema.define(version: 20160722220135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "medical_histories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "cardio_diagnostic"
+    t.string   "cardio_secondary"
+    t.string   "clinical_diagnostic"
+    t.string   "clinical_secondary"
+    t.string   "cardio_medication"
+    t.string   "secondary_medication"
+    t.string   "related_medication"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "text"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "patient_infos", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.integer  "age"
+    t.string   "gender"
+    t.string   "address"
+    t.string   "contact"
+    t.string   "health_insurance"
+    t.string   "primary_doctor"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "physical_exams", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "pulse"
+    t.integer  "systolic_pressure"
+    t.integer  "diastolic_pressure"
+    t.decimal  "height"
+    t.integer  "weight"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

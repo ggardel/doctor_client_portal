@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  cardio_diagnostic: MyString
+  cardio_secondary: MyString
+  clinical_diagnostic: MyString
+  clinical_secondary: MyString
+  cardio_medication: MyString
+  secondary_medication: MyString
+  related_medication: MyString
+
+two:
+  user_id: 1
+  cardio_diagnostic: MyString
+  cardio_secondary: MyString
+  clinical_diagnostic: MyString
+  clinical_secondary: MyString
+  cardio_medication: MyString
+  secondary_medication: MyString
+  related_medication: MyString
