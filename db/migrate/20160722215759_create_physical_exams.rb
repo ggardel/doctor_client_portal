@@ -5,7 +5,7 @@ class CreatePhysicalExams < ActiveRecord::Migration
       t.integer :pulse
       t.integer :systolic_pressure
       t.integer :diastolic_pressure
-      t.decimal :height
+      t.string  :height
       t.integer :weight
 
       t.timestamps null: false

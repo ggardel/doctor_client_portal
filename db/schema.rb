@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20160722220135) do
     t.integer  "pulse"
     t.integer  "systolic_pressure"
     t.integer  "diastolic_pressure"
-    t.decimal  "height"
+    t.string   "height"
     t.integer  "weight"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
