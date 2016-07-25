@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'admin/index' => "admin#index"
+
+  get 'admin/new'
+
+  get 'admin/create'
+
+  get 'admin/show'
+
+  get 'admin/edit'
+
+  get 'admin/update'
+
+  get 'admin/destroy'
+
   devise_for :users
   get 'welcome/index'
 
