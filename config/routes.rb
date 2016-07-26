@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 #resources :users
 
+#routes
+
+#index action "patient list"
   get 'admin/index' => "admin#index"
 
 
@@ -13,16 +16,27 @@ Rails.application.routes.draw do
 
   get 'admin/new_notes' => "admin#new_note", as: :notes
 
-  get 'admin/create'
 
+#Create action
+
+  post 'admin/new'  => "admin#create"
+  post 'admin/new_medical'  => "admin#create_medical_hist"
+  post 'admin/new_physical'  => "admin#create_physical_exam"
+  post 'admin/new_notes'  => "admin#create_note"
+
+
+#Show action
   get 'admin/:user_id' => "admin#show", as: :show_user
 
+
+#Edit action
   get 'admin/edit'
 
   get 'admin/update'
 
   get 'admin/destroy'
 
+#Users devise
   devise_for :users
   get 'welcome/index'
 
