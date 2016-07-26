@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
+#resources :users
 
   get 'admin/index' => "admin#index"
 
-  get 'admin/new'
+
+#new action
+  get 'admin/new' => "admin#new", as: :patient_infos
+
+  get 'admin/new_medical' => "admin#new_medical_hist", as: :medical_histories
+
+  get 'admin/new_physical' => "admin#new_physical_exam", as: :physical_exams
+
+  get 'admin/new_notes' => "admin#new_note", as: :notes
 
   get 'admin/create'
 
-  get 'admin/show'
+  get 'admin/:user_id' => "admin#show", as: :show_user
 
   get 'admin/edit'
 

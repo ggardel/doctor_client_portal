@@ -1,0 +1,54 @@
+
+<h1>Add a new Patient!  admin#new_medical_hist</h1>
+<%= form_for @medical_histories do |f| %>
+<h2>Medical History:<h2>
+
+   <div>
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id %>
+   </div>
+
+
+    <div>
+        <%= f.label :cardio_diagnostic %>
+        <%= f.text_field :cardio_diagnostic %>
+    </div>
+
+    <div>
+        <%= f.label :cardio_secondary %>
+        <%= f.text_field :cardio_secondary %>
+    </div>
+
+    <div>
+        <%= f.label :clinical_diagnostic %>
+        <%= f.text_field :clinical_diagnostic %>
+    </div>
+
+    <div>
+        <%= f.label :clinical_secondary %>
+        <%= f.text_field :clinical_secondary %>
+    </div>
+
+    <div>
+        <%= f.label :cardio_medication %>
+        <%= f.text_field :cardio_medication %>
+    </div>
+
+    <div>
+        <%= f.label :secondary_medication %>
+        <%= f.text_field :secondary_medication%>
+    </div>
+
+    <div>
+        <%= f.label :related_medication %>
+        <%= f.text_field :related_medication %>
+    </div>
+
+    <%= f.submit "Save!" %>
+
+
+<% end %>
+</br></br>
+<%= link_to "Add Physical Exam!", physical_exams_path %>
+</BR>
+<%= link_to "Menu", welcome_index_path %>

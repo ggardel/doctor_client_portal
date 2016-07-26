@@ -1,2 +1,39 @@
 <h1>Admin#show</h1>
 <p>Find me in app/views/admin/show.html.erb</p>
+
+<h1> <%= @patient_infos.name %> </h1>
+ <ul>
+   <li>Age: <%= @patient_infos.age%> </li>
+   <li>Gender: <%= @patient_infos.gender%> </li>
+   <li>Address: <%= @patient_infos.address %></li>
+   <li>Phone: <%= @patient_infos.contact %></li>
+   <li>Health Insurance: <%= @patient_infos.health_insurance %></li>
+   <li>Primary Doctor: <%= @patient_infos.primary_doctor %></li>
+ </ul>
+
+<h2>Medical History</h2>
+  <ul>
+     <li>Cardio Diagnostic: <%= @medical_histories.cardio_diagnostic%>, <%= @medical_histories.cardio_secondary%></li>
+     <li>Clinical Diagnostic: <%= @medical_histories.clinical_diagnostic%>, <%= @medical_histories.clinical_secondary%></li>
+     <li>Medications: <%= @medical_histories.cardio_medication%>, <%= @medical_histories.secondary_medication%>, <%= @medical_histories.related_medication%></li>
+
+  </ul>
+
+<h3>Physical Exam</h3>
+  <ul>
+    <li>Pulse: <%= @physical_exams.pulse%> per minute.</li>
+    <li>Blood Pressure: <%= @physical_exams.systolic_pressure%> x <%= @physical_exams.diastolic_pressure%> mmHg.</li>
+    <li>Height: <%= @physical_exams.height%>.</li>
+    <li>Weight: <%= @physical_exams.weight%> lbs.</li>
+
+  </ul>
+
+<h4>Doctor Notes</h4>
+<div>
+  <div>Date: <%= @notes.date %> - <%= @notes.text%> - !!!END!!!</div>
+</div>
+
+</br></br>
+<%= link_to "Back to the list!", admin_index_path %>
+</br>
+<%= link_to "Menu", welcome_index_path %>

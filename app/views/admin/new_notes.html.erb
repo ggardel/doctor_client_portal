@@ -1,0 +1,30 @@
+<h1>Add a new Patient!  admin#new_note</h1>
+<%= form_for @notes do |f| %>
+<h2>Medical Notes:<h2>
+
+   <div>
+      <%= f.label :user_id %>
+      <%= f.text_field :user_id %>
+   </div>
+
+
+    <div>
+        <%= f.label :date %> (yyyy/mm/dd)
+        <%= f.text_field :date %>
+    </div>
+
+    <div>
+        <%= f.label :text %>
+        <%= f.text_field :text %>
+    </div>
+
+
+
+    <%= f.submit "Save!" %>
+
+
+<% end %>
+</br></br>
+
+
+<%= link_to "Menu", welcome_index_path %>

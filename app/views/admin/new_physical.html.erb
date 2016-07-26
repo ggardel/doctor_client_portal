@@ -1,0 +1,44 @@
+<h1>Add a new Patient! admin#new_physical_exam</h1>
+<%= form_for @physical_exams do |f| %>
+<h2>Physical Exam:<h2>
+    <div>
+        <%= f.label :user_id%>
+        <%= f.text_field :user_id %>
+    </div>
+
+    <div>
+        <%= f.label :pulse%>
+        <%= f.text_field :pulse %>
+    </div>
+
+    <div>
+        <%= f.label :systolic_pressure %>
+        <%= f.text_field :systolic_pressure %>
+    </div>
+
+    <div>
+        <%= f.label :diastolic_pressure %>
+        <%= f.text_field :diastolic_pressure %>
+    </div>
+
+    <div>
+        <%= f.label :height%>
+        <%= f.text_field :height %>
+    </div>
+
+    <div>
+        <%= f.label :weight %>
+        <%= f.text_field :weight%>
+    </div>
+
+
+
+    <%= f.submit "Save" %>
+
+<% end %>
+
+</br></br>
+<%= link_to "Add Note!", notes_path %>
+
+</br>
+<%= link_to "Menu", welcome_index_path %>

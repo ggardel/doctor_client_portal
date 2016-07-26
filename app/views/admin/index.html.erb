@@ -3,8 +3,13 @@
 
 <ul>
     <% @patient_infos.each do |patient_info| %>
+        <a href="/admin/<%= patient_info.id %>" >
         <li>
-            <strong> <%= patient_info.name %> </strong> - age: <%= patient_info.age %>
+            <strong> <%= patient_info.name%></strong>
         </li>
+</a>
     <% end %>
 </ul>
+<%= link_to "Add a new Patient", patient_infos_path %>
+</br>
+<%= link_to "Back", welcome_index_path %>
