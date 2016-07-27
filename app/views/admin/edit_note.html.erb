@@ -1,0 +1,27 @@
+<h1>Admin#edit_note</h1>
+<p>Find me in app/views/admin/edit.html.erb</p>
+
+<h1>Edit Medical Notes!</h1>
+
+<%= form_tag("/admin/#{@notes.user_id}/update_note", method: "patch")  do  %>
+
+    <div>
+        <%= label_tag :text %>
+        <%= text_field_tag :text, @notes.text %>
+    </div>
+
+    <div>
+        <%= label_tag :date %>
+        <%= text_field_tag :date, @notes.date %>
+    </div>
+
+
+
+    <%= submit_tag "Submit these changes!" %>
+
+<% end %>
+</br>
+<%= link_to "Back", show_user_path %>
+
+</br>
+<%= link_to "Back to the list!", admin_index_path %>

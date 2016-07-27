@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
- has_many :patient_infos
- has_many :medical_histories
- has_many :notes
- has_many :physical_exams
+ has_many :patient_infos, dependent: :destroy
+ has_many :medical_histories, dependent: :destroy
+ has_many :notes, dependent: :destroy
+ has_many :physical_exams, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

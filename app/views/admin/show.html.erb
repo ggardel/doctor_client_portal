@@ -37,3 +37,13 @@
 <%= link_to "Back to the list!", admin_index_path %>
 </br>
 <%= link_to "Menu", welcome_index_path %>
+</br>
+<%= link_to "Edit Patient Info", edit_patient_path %>
+</br>
+<%= link_to "Edit Medical History", edit_medical_path %>
+</br>
+<%= link_to "Edit Physical Rxam", edit_physical_path %>
+</br>
+<%= link_to "Edit Medical Notes", edit_note_path %>
+</br>
+<%= link_to "Delete this Patient!", admin_index_path, method: :delete, data: { confirm: "Are you sure you want to delete Patient?"} %>

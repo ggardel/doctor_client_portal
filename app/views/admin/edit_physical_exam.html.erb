@@ -1,0 +1,40 @@
+<h1>Admin#edit_physical_exam</h1>
+<p>Find me in app/views/admin/edit.html.erb</p>
+
+<h1>Edit Physical Exam!</h1>
+
+<%= form_tag("/admin/#{@physical_exams.user_id}/update_physical", method: "patch")  do  %>
+
+    <div>
+        <%= label_tag :pulse %>
+        <%= text_field_tag :pulse, @physical_exams.pulse %>
+    </div>
+
+    <div>
+        <%= label_tag :systolic_pressure %>
+        <%= text_field_tag :systolic_pressure, @physical_exams.systolic_pressure %>
+    </div>
+
+    <div>
+        <%= label_tag :diastolic_pressure %>
+        <%= text_field_tag :diastolic_pressure, @physical_exams.diastolic_pressure %>
+    </div>
+
+    <div>
+        <%= label_tag :height %>
+        <%= text_field_tag :height, @physical_exams.height %>
+    </div>
+
+    <div>
+        <%= label_tag :weight %>
+        <%= text_field_tag :weight, @physical_exams.weight %>
+    </div>
+
+
+    <%= submit_tag "Submit these changes!" %>
+
+<% end %>
+</br>
+<%= link_to "Back", show_user_path %>
+</br>
+<%= link_to "Back to the list!", admin_index_path %>

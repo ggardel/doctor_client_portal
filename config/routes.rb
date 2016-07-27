@@ -9,11 +9,8 @@ Rails.application.routes.draw do
 
 #new action
   get 'admin/new' => "admin#new", as: :patient_infos
-
   get 'admin/new_medical' => "admin#new_medical_hist", as: :medical_histories
-
   get 'admin/new_physical' => "admin#new_physical_exam", as: :physical_exams
-
   get 'admin/new_notes' => "admin#new_note", as: :notes
 
 
@@ -30,11 +27,21 @@ Rails.application.routes.draw do
 
 
 #Edit action
-  get 'admin/edit'
+  get 'admin/:user_id/edit' => "admin#edit", as: :edit_patient
+  get 'admin/:user_id/edit_medical' => "admin#edit_medical_hist", as: :edit_medical
+  get 'admin/:user_id/edit_physical' => "admin#edit_physical_exam", as: :edit_physical
+  get 'admin/:user_id/edit_note' => "admin#edit_note", as: :edit_note
 
-  get 'admin/update'
 
-  get 'admin/destroy'
+#Update action
+
+  patch 'admin/:user_id/update' => "admin#update"
+  patch 'admin/:user_id/update_medical' => "admin#update_medical_hist"
+  patch 'admin/:user_id/update_physical' => "admin#update_physical_exam"
+  patch 'admin/:user_id/update_note' => "admin#update_note"
+
+#destroy action
+  delete 'admin/:id'  => "admin#destroy"
 
 #Users devise
   devise_for :users

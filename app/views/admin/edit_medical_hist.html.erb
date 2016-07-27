@@ -1,0 +1,49 @@
+<h1>Admin#edit_medical_hist</h1>
+<p>Find me in app/views/admin/edit.html.erb</p>
+
+<h1>Edit Medical History!</h1>
+
+<%= form_tag("/admin/#{@medical_histories.user_id}/update_medical", method: "patch")  do  %>
+
+    <div>
+        <%= label_tag :cardio_diagnostic %>
+        <%= text_field_tag :cardio_diagnostic, @medical_histories.cardio_diagnostic %>
+    </div>
+
+    <div>
+        <%= label_tag :cardio_secondary %>
+        <%= text_field_tag :cardio_secondary, @medical_histories.cardio_secondary %>
+    </div>
+
+    <div>
+        <%= label_tag :clinical_diagnostic %>
+        <%= text_field_tag :clinical_diagnostic, @medical_histories.clinical_diagnostic %>
+    </div>
+
+    <div>
+        <%= label_tag :clinical_secondary %>
+        <%= text_field_tag :clinical_secondary, @medical_histories.clinical_secondary %>
+    </div>
+
+    <div>
+        <%= label_tag :cardio_medication %>
+        <%= text_field_tag :cardio_medication, @medical_histories.cardio_medication %>
+    </div>
+
+    <div>
+        <%= label_tag :secondary_medication %>
+        <%= text_field_tag :secondary_medication, @medical_histories.secondary_medication %>
+    </div>
+
+    <div>
+        <%= label_tag :related_medication %>
+        <%= text_field_tag :related_medication, @medical_histories.related_medication%>
+    </div>
+</br>
+    <%= submit_tag "Submit these changes!" %>
+
+<% end %>
+</br>
+<%= link_to "Back", show_user_path %>
+</br>
+<%= link_to "Back to the list!", admin_index_path %>
