@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>DoctorClientPortalApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Doctor-Client Portal</title>
 
-  <% if user_signed_in? %>
-       Signed in as <%= current_user.email %> (#<%= current_user.id%>)
-       <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-   <% else %>
-       <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-   <% end %>
+    <!-- Bootstrap -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+
+
+        <img alt="Brand" src="http://i.imgur.com/BRHbQSr.jpg?1">
+      </a>
+
+<p class="navbar-text navbar-right"> <%= notice %>  <%= alert %>  <% if user_signed_in? %>
+     Signed in as <%= current_user.email %>(#<%= current_user.id%>)
+    <button type="button" class="btn btn-default btn-sm"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></button>
+ <% else %>
+    <button type="button" class="btn btn-default btn-sm"><%= link_to 'Register', new_user_registration_path %></button> or <button type="button" class="btn btn-default btn-sm"><%= link_to 'Sign in', new_user_session_path %></button>
+ <% end %></p>
+
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%= yield %>
-
-</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
