@@ -1,5 +1,17 @@
 class AdminController < ApplicationController
+before_action :authenticate_user!
+#protect_from_forgery prepend: true
+ #before_action :authenticate_user!
+ before_action :authorize_admin
 
+ def authorize_admin
+ if current_user.admin
+   #redirect_to admin_index_path
+ else
+   
+   redirect_to welcome_index_path
+ end
+ end
 #Index action list patient name with links
   def index
 

@@ -1,0 +1,16 @@
+<h1>Guest#show</h1>
+<p>Find me in app/views/guest/show.html.erb</p>
+
+
+<h1>Doctor Notes</h1>
+<div>
+  <div>Date: <%= @notes.date %> - <%= @notes.text%> - !!!END!!!</div>
+</div>
+
+
+</br></br>
+
+<%= link_to "Back", show_physical_path%>
+</br>
+<%= link_to "Menu", welcome_index_path %>
+</br>

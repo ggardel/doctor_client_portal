@@ -1,9 +1,22 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 
+<ul>
+    <% @patient_infos.each do |patient_info| %>
+        <a href="/guest/<%= patient_info.user_id %>/show_patient_info" >
+        <li>
+            <strong> <%= patient_info.name%></strong>
+        </li>
+</a>
 
-<%= link_to "Add a new Patient", patient_infos_path %>
-</br>
-<%= link_to "Patient List", admin_index_path %>
+    <% end %>
+</ul>
+
+
 </br>
 <%= link_to "Edit Account", edit_user_registration_path %>
+</br>
+<%if current_user.admin?%>
+<%= link_to "Patient List", admin_index_path %>
+<%end%>
+</br>

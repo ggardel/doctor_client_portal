@@ -1,0 +1,23 @@
+<h1>Guest#show</h1>
+<p>Find me in app/views/admin/show.html.erb</p>
+
+
+<h1>Medical History</h1>
+  <ul>
+     <li>Cardio Diagnostic: <%= @medical_histories.cardio_diagnostic%>, <%= @medical_histories.cardio_secondary%></li>
+     <li>Clinical Diagnostic: <%= @medical_histories.clinical_diagnostic%>, <%= @medical_histories.clinical_secondary%></li>
+     <li>Medications: <%= @medical_histories.cardio_medication%>, <%= @medical_histories.secondary_medication%>, <%= @medical_histories.related_medication%></li>
+
+  </ul>
+
+
+</br></br>
+
+<%= link_to "Physical Exam", show_physical_path%>
+</br>
+<%= link_to "Medical Notes", show_note_path%>
+</br>
+<%= link_to "Back", show_patient_path%>
+</br>
+<%= link_to "Menu", welcome_index_path %>
+</br>

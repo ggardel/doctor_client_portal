@@ -1,0 +1,24 @@
+<h1>Guest#show</h1>
+<p>Find me in app/views/guest/show.html.erb</p>
+
+
+<h1> <%= @patient_infos.name %> </h1>
+ <ul>
+   <li>Age: <%= @patient_infos.age%> </li>
+   <li>Gender: <%= @patient_infos.gender%> </li>
+   <li>Address: <%= @patient_infos.address %></li>
+   <li>Phone: <%= @patient_infos.contact %></li>
+   <li>Health Insurance: <%= @patient_infos.health_insurance %></li>
+   <li>Primary Doctor: <%= @patient_infos.primary_doctor %></li>
+ </ul>
+
+
+</br></br>
+<%= link_to "Medical History", show_medical_path%>
+</br>
+<%= link_to "Physical Exam", show_physical_path%>
+</br>
+<%= link_to "Medical Notes", show_note_path%>
+</br>
+<%= link_to "Menu", welcome_index_path %>
+</br>

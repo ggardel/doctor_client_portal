@@ -1,0 +1,24 @@
+<h1>Guest#show</h1>
+<p>Find me in app/views/guest/show.html.erb</p>
+
+
+
+<h1>Physical Exam</h1>
+  <ul>
+    <li>Pulse: <%= @physical_exams.pulse%> per minute.</li>
+    <li>Blood Pressure: <%= @physical_exams.systolic_pressure%> x <%= @physical_exams.diastolic_pressure%> mmHg.</li>
+    <li>Height: <%= @physical_exams.height%>.</li>
+    <li>Weight: <%= @physical_exams.weight%> lbs.</li>
+
+  </ul>
+
+</br></br>
+
+
+
+<%= link_to "Medical Notes", show_note_path%>
+</br>
+<%= link_to "Back", show_medical_path%>
+</br>
+<%= link_to "Menu", welcome_index_path %>
+</br>
