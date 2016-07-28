@@ -5,6 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create(email: "gustavo@gmail.com", password: "cancan", password_confirmation: "cancan", admin: true)
+User.create(email: "jamesbond@gmail.com", password: "cancan", password_confirmation: "cancan")
+User.create(email: "superman@gmail.com", password: "cancan", password_confirmation: "cancan")
+User.create(email: "lexluthor@gmail.com", password: "cancan", password_confirmation: "cancan")
+User.create(email: "greenhulk@gmail.com", password: "cancan", password_confirmation: "cancan")
+User.create(email: "batman@gmail.com", password: "cancan", password_confirmation: "cancan")
+User.create(email: "elektra@gmail.com", password: "cancan", password_confirmation: "cancan")
+
+
+
 PhysicalExam.create(user_id: 2, pulse: 80, systolic_pressure: 130, diastolic_pressure: 86, height: "6'2", weight: 180)
 PhysicalExam.create(user_id: 3, pulse: 58, systolic_pressure: 110, diastolic_pressure: 78, height: "6'4", weight: 210)
 PhysicalExam.create(user_id: 4, pulse: 94, systolic_pressure: 140, diastolic_pressure: 94, height: "5'6", weight: 206)
