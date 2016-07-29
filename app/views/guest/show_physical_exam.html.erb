@@ -1,5 +1,10 @@
-<h1>Guest#show</h1>
-<p>Find me in app/views/guest/show.html.erb</p>
+
+
+
+<div class ="patient">
+
+
+
 
 
 
@@ -15,10 +20,15 @@
 </br></br>
 
 
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Medical Notes", show_note_path%></button>
+</br>
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Back", show_medical_path%></button>
+</br>
+<button type="button" class="btn btn-default btn-md ">
+<%= link_to "Menu", welcome_index_path %></button>
+</br>
 
-<%= link_to "Medical Notes", show_note_path%>
-</br>
-<%= link_to "Back", show_medical_path%>
-</br>
-<%= link_to "Menu", welcome_index_path %>
-</br>
+
+</div>

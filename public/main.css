@@ -1,0 +1,66 @@
+
+.jumbotron{
+  background-image: url(http://i.imgur.com/zKYnzFk.jpg);
+  background-size: cover;
+  color:white;
+text-align: left;;
+}
+#jumbotron_p {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow:rgb(13, 34, 218) 0px 0.5px;
+}
+#jumbotron_h1 {
+  text-shadow: rgb(13, 34, 218)  1px 2px;
+
+}
+li {
+  list-style-type: none;
+}
+.patient{
+  text-align: center;
+  margin: 10%;
+}
+.body {
+  background-image: url(http://i.imgur.com/ylfScJW.jpg);
+  background-size: cover;
+}
+.row {
+  font-size: 20px;
+}
+.index_img {
+  padding-left: 40px;
+  padding-top: 80px;
+  text-align: left;
+  font-weight: bold;
+}
+#patient_info {
+  font-size: 40px;
+}
+#welcome_h1{
+  font-size: 60px;
+  font-style: italic;
+
+}
+#login{
+  padding-top: 60px;
+}
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+}

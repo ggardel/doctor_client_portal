@@ -1,5 +1,4 @@
-<h1>Admin#show</h1>
-<p>Find me in app/views/admin/show.html.erb</p>
+<div class = "patient">
 
 <h1> <%= @patient_infos.name %> </h1>
  <ul>
@@ -33,17 +32,24 @@
   <div>Date: <%= @notes.date %> - <%= @notes.text%> - !!!END!!!</div>
 </div>
 
-</br></br>
-<%= link_to "Back to the list!", admin_index_path %>
+</br></br><button type="button" class="btn btn-default">
+<%= link_to "Back to the list!", admin_index_path %></button>
 </br>
-<%= link_to "Menu", welcome_index_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Menu", welcome_index_path %></button>
 </br>
-<%= link_to "Edit Patient Info", edit_patient_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Edit Patient Info", edit_patient_path %></button>
 </br>
-<%= link_to "Edit Medical History", edit_medical_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Edit Medical History", edit_medical_path %></button>
 </br>
-<%= link_to "Edit Physical Rxam", edit_physical_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Edit Physical Rxam", edit_physical_path %></button>
 </br>
-<%= link_to "Edit Medical Notes", edit_note_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Edit Medical Notes", edit_note_path %></button>
 </br>
-<%= link_to "Delete this Patient!", show_user_path, method: :delete, data: { confirm: "Are you sure you want to delete Patient?"} %>
+<button type="button" class="btn btn-default">
+<%= link_to "Delete this Patient!", show_user_path, method: :delete, data: { confirm: "Are you sure you want to delete Patient?"} %></button>
+</div>

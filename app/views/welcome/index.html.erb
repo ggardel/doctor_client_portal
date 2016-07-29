@@ -1,7 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class ="patient">
+<h1 id = "welcome_h1">Welcome,</h1>
+</br>
 
-<ul>
+<ul id="patient_info">
     <% @patient_infos.each do |patient_info| %>
         <a href="/guest/<%= patient_info.user_id %>/show_patient_info" >
         <li>
@@ -13,10 +14,12 @@
 </ul>
 
 
-</br>
+</br><button type="button" class="btn btn-default">
 <%= link_to "Edit Account", edit_user_registration_path %>
-</br>
+</button>
+</br><button type="button" class="btn btn-default btn-md ">
 <%if current_user.admin?%>
 <%= link_to "Patient List", admin_index_path %>
-<%end%>
+<%end%></button>   
 </br>
+</div>

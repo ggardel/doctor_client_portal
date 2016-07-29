@@ -1,5 +1,6 @@
-<h1>Admin#new</h1>
-<p>Find me in app/views/admin/new.html.erb</p>
+<div class = "patient">
+
+
 
 <h1>Add a new Patient!</h1>
 <%= form_for @patient_infos do |f| %>
@@ -50,7 +51,9 @@
 
 <% end %>
 </br></br>
-
-<%= link_to "Add Medical History!", medical_histories_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Add Medical History!", medical_histories_path %></button>
 </br>
-<%= link_to "Menu", welcome_index_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Menu", welcome_index_path %></button>
+</div>

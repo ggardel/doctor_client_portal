@@ -1,4 +1,6 @@
-<h1>Add a new Patient! admin#new_physical_exam</h1>
+<div class = "patient">
+
+<h1>Add a new Patient!</h1>
 <%= form_for @physical_exams do |f| %>
 <h2>Physical Exam:<h2>
     <div>
@@ -37,8 +39,9 @@
 
 <% end %>
 
-</br></br>
-<%= link_to "Add Note!", notes_path %>
+</br></br><button type="button" class="btn btn-default">
+<%= link_to "Add Note!", notes_path %></button>
 
-</br>
-<%= link_to "Menu", welcome_index_path %>
+</br><button type="button" class="btn btn-default">
+<%= link_to "Menu", welcome_index_path %></button>
+</div>

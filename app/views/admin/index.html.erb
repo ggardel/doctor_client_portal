@@ -1,5 +1,8 @@
-<h1>Admin#index</h1>
-<p>Find me in app/views/admin/index.html.erb</p>
+
+<div class = "patient">
+
+<h1>Patient List</h1>
+
 
 <ul>
     <% @patient_infos.each do |patient_info| %>
@@ -14,7 +17,9 @@
 
 </br>
 
+</br><button type="button" class="btn btn-default">
+<%= link_to "Back", welcome_index_path %></button>
 </br>
-<%= link_to "Back", welcome_index_path %>
-</br>
-<%= link_to "Add a new Patient", patient_infos_path %>
+<button type="button" class="btn btn-default">
+<%= link_to "Add a new Patient", patient_infos_path %></button>
+</div>
