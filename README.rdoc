@@ -13,9 +13,16 @@ To have a better experience of the full application you can sign in as administr
 
 Technology used:
 
-http://i.imgur.com/3kQ3n8d.jpg  http://i.imgur.com/cKphAd5m.png   http://i.imgur.com/ygVBgoYm.png
+http://i.imgur.com/3kQ3n8dt.jpg    
 
-http://i.imgur.com/3kQ3n8dm.jpg  http://i.imgur.com/Syj0Mibm.png
+http://i.imgur.com/TY7OwXSt.jpg
+
+http://i.imgur.com/cKphAd5t.png   
+
+http://i.imgur.com/ygVBgoYt.png
+
+http://i.imgur.com/Syj0Mibt.png
+
 
 
 This is a Rails application of a Doctor/Client Portal where the user (client)
