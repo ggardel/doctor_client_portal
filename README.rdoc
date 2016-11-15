@@ -1,5 +1,13 @@
 == README
 
+<a href="http://imgur.com/L14Cn9s"><img src="http://i.imgur.com/L14Cn9s.png" title="source: imgur.com" /></a>
+
+
+DOCTOR-CLIENT-PORTAL - Portal where the user (client) would have access to (read) his own information (only) and the Administrator (Doctor or Nurse) would have access to all clients information (C.R.U.D.). Built in 1 week sprint using Ruby on Rails, PostgreSQL, Devise, HTML5, CSS3 and Bootstrap.
+
+Visit the app!
+http://doctor-client-portal.herokuapp.com/users/sign_in
+
 This is a Rails application of a Doctor/Client Portal where the user (client)
 would have access to (read) his own information (only) and the Administrator (Doctor or Nurse)
 would have access to all clients information (C.R.U.D.).
