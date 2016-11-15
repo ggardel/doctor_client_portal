@@ -8,6 +8,13 @@ DOCTOR-CLIENT-PORTAL - Portal where the user (client) would have access to (read
 Visit the app!
 http://doctor-client-portal.herokuapp.com/users/sign_in
 
+To have a better experience of the full application you can sign in as administrator (log in  doctor@doctor  /  password cancan) or as patient you can create your onw registration.
+
+
+Technology used:
+
+http://i.imgur.com/TY7OwXS.jpg
+
 This is a Rails application of a Doctor/Client Portal where the user (client)
 would have access to (read) his own information (only) and the Administrator (Doctor or Nurse)
 would have access to all clients information (C.R.U.D.).
